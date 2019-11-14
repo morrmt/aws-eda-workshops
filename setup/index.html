@@ -269,11 +269,70 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../setup/" title="Getting Started" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting Started
+      </label>
+    
+    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
       Getting Started
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sign-in-to-the-provided-aws-accounts" class="md-nav__link">
+    Sign in to the provided AWS accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-modules" class="md-nav__link">
+    Overview of modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-environment-at-a-glance" class="md-nav__link">
+    Lab environment at a glance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-started-with-the-prerequisites" class="md-nav__link">
+    Get started with the prerequisites &raquo;
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -389,8 +448,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-of-labs" class="md-nav__link">
-    Overview of labs
+  <a href="#overview-of-modules" class="md-nav__link">
+    Overview of modules
   </a>
   
 </li>
@@ -425,11 +484,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/awslabs/scale-out-computing-on-aws.git/edit/master/docs/ee/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/awslabs/scale-out-computing-on-aws.git/edit/master/docs/setup/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>In this session, learn how to leverage the unique features of the Amazon Aurora platform to build faster, more scalable database applications optimized for the cloud. Through hands-on labs, we help you understand how to best take advantage of the Aurora platform's capabilities to effectively accelerate application development.</p>
 <h2 id="sign-in-to-the-provided-aws-accounts">Sign in to the provided AWS accounts<a class="headerlink" href="#sign-in-to-the-provided-aws-accounts" title="Permanent link">&para;</a></h2>
 <p>At the beginning of the workshop you have been provided with a <strong>12-character access code</strong>. This access code grants you permission to use a dedicated AWS account for the purposes of this workshop.</p>
 <p>Go to <a href="https://dashboard.eventengine.run/" target="_blank"><strong>https://dashboard.eventengine.run/</strong></a>, enter the access code and click <strong>Proceed</strong>.</p>
@@ -438,7 +496,7 @@
 <p><span class="image"><img alt="EventEngine Dashboard" src="ee-dashboard.png?raw=true" /></span></p>
 <p>Click <strong>Open Console</strong>. For the purposes of this workshop, you will not need to use command line and API access credentials.</p>
 <p><span class="image"><img alt="EventEngine Open Console" src="ee-open-console.png?raw=true" /></span></p>
-<h2 id="overview-of-labs">Overview of labs<a class="headerlink" href="#overview-of-labs" title="Permanent link">&para;</a></h2>
+<h2 id="overview-of-modules">Overview of modules<a class="headerlink" href="#overview-of-modules" title="Permanent link">&para;</a></h2>
 <p>Time permitting, you will run the following hands-on labs. Start with the <a href="/modules/prerequisites/">prerequisites</a>.</p>
 <table>
 <thead>
@@ -458,39 +516,27 @@
 </tr>
 <tr>
 <td>2</td>
-<td><a href="/modules/connect/"><strong>Connecting, Loading Data and Auto Scaling</strong></a></td>
+<td><a href="/modules/connect/"><strong>Deploy environment</strong></a></td>
 <td>Recommended, for provisioned clusters</td>
-<td>Connect to the DB cluster for the first time, load an initial data set and test read replica auto scaling. The initial data set may be used in subsequent labs.</td>
+<td>Using CloudFormation, deploy an elastic computing environment on the AWS Cloud.</td>
 </tr>
 <tr>
 <td>3</td>
-<td><a href="/modules/clone/"><strong>Cloning Clusters</strong></a></td>
+<td><a href="/modules/clone/"><strong>Log into remote desktop</strong></a></td>
 <td>Recommended, for provisioned clusters</td>
 <td>Clone an Aurora DB cluster and observing the divergence of the data set.</td>
 </tr>
 <tr>
 <td>4</td>
-<td><a href="/modules/backtrack/"><strong>Backtracking a Cluster</strong></a></td>
+<td><a href="/modules/backtrack/"><strong>Launch Vivado GUI</strong></a></td>
 <td>Recommended, for provisioned clusters</td>
 <td>Backtrack an Aurora DB cluster to fix an accidental DDL operation.</td>
 </tr>
 <tr>
 <td>5</td>
-<td><a href="/modules/perf-insights/"><strong>Using Performance Insights</strong></a></td>
+<td><a href="/modules/perf-insights/"><strong>Submit Batch Workload</strong></a></td>
 <td>Recommended, for provisioned clusters</td>
 <td>Examine the performance of your DB instances using RDS Performance Insights</td>
-</tr>
-<tr>
-<td>6</td>
-<td><a href="/modules/create-serverless/"><strong>Creating a Serverless Aurora Cluster</strong></a></td>
-<td>Recommended, for serverless clusters</td>
-<td>Create a new Amazon Aurora Serverless MySQL DB cluster manually. You may skip the provisioned cluster labs if you are planning to operate a serverless workload.</td>
-</tr>
-<tr>
-<td>7</td>
-<td><a href="/modules/connect-serverless/"><strong>Using Aurora Serverless with Lambda Functions</strong></a></td>
-<td>Recommended, for serverless clusters</td>
-<td>Connect to your serverless cluster using the RDS Data API and Lambda functions. Requires the previous lab.</td>
 </tr>
 </tbody>
 </table>
@@ -527,6 +573,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                License
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
